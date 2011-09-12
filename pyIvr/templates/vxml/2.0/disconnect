@@ -1,0 +1,5 @@
+<form id="{{idBlock}}">
+  <block>
+     <disconnect/>
+  </block>
+</form>

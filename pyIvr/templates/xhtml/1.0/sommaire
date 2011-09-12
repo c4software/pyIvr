@@ -1,0 +1,7 @@
+<p>{{ressource['text']}}</p>
+
+<ul>
+  {% for choice in choices %}
+    <li> <a href="{{dynamique}}{{choice.nextId}}" /> Choix {{choice.dtmf}}</a></li>
+  {% endfor %}
+</li>

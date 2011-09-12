@@ -1,0 +1,17 @@
+<menu id="{{idBlock}}">   
+	<property name="inputmodes" value="dtmf" /> 
+	<prompt bargein="{{anticipable}}" timeout="0s"> 
+		<audio src="{{son}}" /> 
+  </prompt>
+		
+	<choice dtmf="*" next="{{nextId}}" fetchtimeout="1s" /> 
+
+	<noinput> 
+		<goto next="{{nextId}}" /> 
+	</noinput> 
+	
+	<nomatch> 
+		<goto next="{{nextId}}" /> 
+	</nomatch> 
+</menu>
+

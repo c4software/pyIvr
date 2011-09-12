@@ -1,0 +1,4 @@
+<p>{{ressource['text']}}</p>
+<br />
+<a href="{{dynamique}}{{nextId}}">Suite ></a> 
+

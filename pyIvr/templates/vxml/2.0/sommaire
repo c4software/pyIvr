@@ -1,0 +1,19 @@
+<menu id="{{idBlock}}">   
+	<property name="inputmodes" value="dtmf" /> 
+	<prompt bargein="True" timeout="0s"> 
+		<audio src="{{ressource['son']}}" /> 
+  </prompt>
+	
+	{% for choice in choices %}
+	<choice dtmf="{{choice.dtmf}}" next="{{dynamique}}{{choice.nextId}}" fetchtimeout="1s" /> 
+	{% endfor %}
+
+	<noinput> 
+		<goto next="#{{idBlock}}" /> 
+	</noinput> 
+	
+	<nomatch> 
+		<goto next="#{{idBlock}}" />
+	</nomatch> 
+</menu>
+
