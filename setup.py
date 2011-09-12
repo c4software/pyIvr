@@ -10,11 +10,11 @@ from setuptools import setup
 setup(
     name='pyIvr',
     version='0.1dev',
-    url='http://c4software.another-team.com',
+    url='https://github.com/c4software/pyIvr',
     license='BSD',
     author='Brosseau Valentin',
     author_email='c4software@gmail.com',
-    description='TODO',
+    description='Generate IVR (or webpage, or anything else) from a json.',
     long_description=__doc__,
     namespace_packages=['pyIvr'],
     packages=[
