@@ -1,5 +1,4 @@
 from pyIvr.decorator import render, _render
-from flask import Blueprint
 from flask.views import View
 
 __version__ = "0.1dev"
