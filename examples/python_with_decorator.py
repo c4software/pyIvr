@@ -1,16 +1,21 @@
-from afIvr.guideVocal import guideVocal
+from pyIvr.ext.afone.guideVocal import guideVocal
 from pyIvr.decorator import render
 
 gv = guideVocal("guide.json")
 
 # Fonction de test
-@render()
+@render('vxml','2.0')
 def test():
-  return [	
-  			{"type":"message", "parametre": {"ressource":gv.getElement("begin"),"idBlock":"message1","nextId":"#message2"}},
-			{"type":"message", "parametre": {"ressource":gv.getElement("end"),"idBlock":"message2","nextId":"#end"}},
-  			{"type":"disconnect", "parametre": {"idBlock":"end"}},
-         ]
+  return {
+    "params":{
+      "begin":"message1"
+    },
+    "svi":{
+            "message1":{"type":"message", "parametre":   {"dynamique":"#", "ressource":gv.getElement("son1"),"idBlock":"message1","nextId":"message2"}},
+            "message2":{"type":"message", "parametre":   {"dynamique":"#", "ressource":gv.getElement("son2"),"idBlock":"message2","nextId":"end"}},
+            "end":{"type":"disconnect", "parametre": {"idBlock":"end"}}
+    }
+  }
 
 
-print test()
+print test()[0]

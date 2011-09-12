@@ -9,4 +9,4 @@ def test():
   return svi.get()
 
 
-print test()
+print test()[0]
