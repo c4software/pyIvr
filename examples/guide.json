@@ -1,4 +1,4 @@
 {
-	"begin" : {"son":"son1.wav","text":"Bonjour ..."},
-	"sommaire" : {"son":"son2.wav","text":"Pour le choix ..."}
+	"son1" : {"son":"/static/son1.wav","text":"Bonjour ..."},
+	"son2" : {"son":"/static/son2.wav","text":"Pour le choix ..."}
 }
