@@ -41,8 +41,8 @@ class renderBase:
     #env = Environment(loader=PackageLoader('template', self.render+"/"+self.version))
     emplacement = os.path.dirname(__file__)
     env = Environment(loader=ChoiceLoader([
-                                          FileSystemLoader(emplacement+'/templates/'+self.render+"/"+self.version),
-                                          FileSystemLoader('templates/'+self.render+"/"+self.version)
+                                          FileSystemLoader('templates/'+self.render+"/"+self.version),
+                                          FileSystemLoader(emplacement+'/templates/'+self.render+"/"+self.version)
                                           ]))
                                           
     template = env.get_template(templateUri)
