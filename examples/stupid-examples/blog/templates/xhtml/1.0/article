@@ -1,0 +1,7 @@
+<article>
+        <div class="postContent">
+            <h3><a href='/{{key}}'>{{titre}}</a></h3>
+            <div class="post">{{content}}</div>
+        </div>
+        <div class="clear"></div>
+</article> 

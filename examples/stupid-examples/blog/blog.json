@@ -1,0 +1,10 @@
+{
+  "params":{
+    "css":["static/style.css"],
+    "title":"Stupid Example"
+  },
+  "svi":{
+	  "article1":{"type":"article", "parametre": {"key":"article1","titre":"Article One","content":"Content One"}},
+	  "article2":{"type":"article", "parametre": {"key":"article2","titre":"Article Two","content":"Content Two"}}
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+   	<title>{{title}}</title>
+	{% for style in css %}
+        <link rel="stylesheet" href="{{style}}" type="text/css" /> 
+    {% endfor %}
+</head>
+
+<body id="index">
+
+    <header id="banner" class="body">
+        <div class="pressTitle">
+	        <h1>Stupid Example</h1>
+	        <h2>pyIvr</h2>
+	        <div class="clear"></div>
+	    </div>
+	    <nav>
+	        <ul>
+		        <li class="active"><a href="/">Accueil</a></li>
+		        <li><a href="#">Page 1</a></li>
+
+		        <li><a href="#">Page 2</a></li>
+		        <li><a href="#">Page 3</a></li>
+	        </ul>
+	    </nav>
+    </header>
+    <section id="content">
+    	<div class="left">
+       		{{content}}
+       	</div>
+		<div class="right">
+			<div>
+				<h3>Categories</h3>
+				<ul>
+					<li><a href=''>Informatique</a></li>
+					<li><a href=''>Python</a></li>
+				</ul>
+			</div>
+		</div>
+       
+    </section>
+    <footer>
+        <hr />
+        Propuls&eacute; par <a href="">pressPy</a> | Valentin Brosseau 2010
+    </footer>
+</body>
+
+</html>
+

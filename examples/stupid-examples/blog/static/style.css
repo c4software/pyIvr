@@ -1,0 +1,308 @@
+body
+{   
+    margin:0px;
+    padding:0px;
+    width:100%;
+    background-image:url('../images/bg.gif');
+    background-repeat:repeat-x;
+    color: #606060;
+    min-width:1050px;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    color:black;
+    text-shadow: white 0px 1px 0px;
+    line-height: 1em;
+}
+
+.clear
+{
+    clear:both;
+}
+
+ul 
+{
+    list-style: outside disc;
+    margin: 1em 0 1.5em 1.5em;
+}
+
+hr
+{
+    border:0px;
+    border-top:1px solid #EEE;
+}
+
+a
+{
+    color: #225E9B;
+    text-decoration:none;
+    text-shadow: #CCC -1px 1px 1px;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+/* HEADER */
+
+#banner .pressTitle h1
+{
+   font-weight:bold;
+   float:left;
+   border-right:1px solid #EEE;
+   padding:10px;
+   margin:50px;
+   margin-right:5px;
+}
+
+#banner .pressTitle h2
+{
+   font-weight:normal;  
+   float:left;
+   font-size:11pt;
+   padding:10px;
+   margin:50px;
+   margin-top:70px;
+   margin-left:0px;
+   text-transform: uppercase;
+}
+
+nav ul
+{
+    margin:0px;
+    list-style: none;
+    border-bottom:1px solid #EEE;
+}
+
+nav li
+{
+    display: inline;
+    margin: 0;
+}
+
+nav li a
+{
+    color:#777;
+    border-bottom: none;
+    border: 1px solid transparent;
+    color: #777;
+    font-size: 0.8em;
+    font-weight: lighter;
+    letter-spacing: 0.04em;
+    line-height: 1.2em;
+    padding: 1px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav li a:hover
+{
+    background: #F1F1F1;
+}
+
+/* CONTENT */
+#content
+{
+    min-width:1050px;
+    padding-top:50px;
+    min-height:800px;
+}
+
+#content .left
+{
+    float:left;
+    width:75%;
+    padding-left:40px;
+}
+
+#content .right
+{
+    padding-right:10px;
+    padding-left:5px;
+    float:right;
+    width:18%;
+}
+
+#content .right h3
+{
+    border-bottom: 1px solid #DDD;
+    color: #777;
+    font-size: 10pt;
+    letter-spacing: 1px;
+    margin-bottom: 0.6em;
+    padding: 6px 8px 3px 0px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#content .right ul
+{
+    margin: 0px 0px 10px;
+    list-style: disc;
+}
+
+#content .right li
+{
+    display: block;
+    list-style: none;
+    padding: 2px;
+}
+
+#content .postDate
+{
+    float:left;
+    border-right:1px solid #EEE;
+    padding:10px;
+}
+
+#content .postDate .dayMonth
+{
+    font-size:15pt;
+    font-weight:bold;
+}
+
+#content .postDate .year
+{
+    font-size:12pt;
+    text-align:right;
+}
+
+#content .postContent
+{
+    float:left;
+    width:90%;
+    padding-left:20px;
+    text-align:justify;
+}
+
+#content .postContent h3
+{
+    font-size: 1.17em;
+    margin-top:10px;
+    margin-bottom:0px;
+}
+
+#content .postContent .post
+{
+    padding-top:10px;
+    padding-left:5px;
+}
+
+#content .postContent .post p:first-child
+{
+    margin:0px;
+    padding:0px;
+}
+
+#content article
+{
+    margin-bottom:20px;
+}
+
+.pageStyle
+{
+    padding-top:50px;
+    margin-left:50px;
+    text-align:right;
+    width:75%;
+}
+
+/* COMMENTS */
+
+.messageErreur
+{
+    border:1px solid #eee;
+    color:red;
+    width:345px;
+    background:#ffc;
+    padding:5px;
+    margin-bottom:20px;
+}
+
+.comments
+{
+    padding-left:120px;
+}
+
+.comments article
+{
+    margin-left:30px;
+    min-height:100px;
+}
+
+.comments article .commentPict
+{
+    float:left;
+    border-right:1px solid #EEE;
+    padding:10px;
+}
+
+.comments article .commentPict img
+{
+     -webkit-box-reflect:below 2px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(white));
+}
+
+.comments article .commentContent
+{
+    font-size:11pt;
+    float:left;
+    width:90%;
+    padding-left:20px;
+    text-align:justify;
+}
+
+.comments article .commentContent .date
+{
+    font-size:9pt;
+    font-style:italic;
+}
+
+.comments h3
+{
+    color: #777;
+    font-size: 10pt;
+    letter-spacing: 1px;
+    margin-bottom: 0.6em;
+    padding: 6px 8px 3px 0px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.comments h4
+{
+    color: #777;
+}
+
+.comments .champsComment
+{
+    padding-left:50px;
+}
+
+.comments input
+{
+    border:1px solid #eee;
+}
+
+.comments textarea
+{
+    border:1px solid #eee;
+}
+
+.comments form
+{
+    font-size:10pt;
+    margin-left:30px;
+}
+
+/* FOOTER */
+footer
+{
+    margin-left:25%;
+    margin-right:25%;
+    text-align:center;
+    font-size:10pt;
+    padding:10px;
+}
+
