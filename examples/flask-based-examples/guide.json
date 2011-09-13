@@ -1,0 +1,4 @@
+{
+	"son1" : {"son":"/static/son1.wav","text":"Bonjour ..."},
+	"son2" : {"son":"/static/son2.wav","text":"Pour le choix ..."}
+}

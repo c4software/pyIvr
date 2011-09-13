@@ -1,0 +1,12 @@
+{
+  "params":{
+    "begin":"sommaire1"
+  },
+  "svi":{
+	  "sommaire1":{"type":"sommaire", "parametre": {"dynamique":"#", "choices":[{"dtmf":"1","nextId":"message1"}, {"dtmf":"2","nextId":"message2"}], "ressource":{"son":"/static/sommaire.wav","text":"Pour le choix ..."},"idBlock":"sommaire1"}},
+	  "message1":{"type":"message", "parametre":   {"dynamique":"#", "ressource":{"son":"/static/son1.wav","text":"Bonjour ..."},"idBlock":"message1","nextId":"message2"}},
+	  "message2":{"type":"message", "parametre":   {"dynamique":"#", "ressource":{"son":"/static/son2.wav","text":"Pour le choix ..."},"idBlock":"message2","nextId":"end"}},
+	  "pi":{"type":"pi", "parametre": {}},
+	  "end":{"type":"disconnect", "parametre": {"idBlock":"end"}}
+  }
+}
