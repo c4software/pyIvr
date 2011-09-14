@@ -41,15 +41,15 @@ class dynamiqueIvr:
   
   def get(self):
     """
-      Permet de retourner l'integraliter du SVI.
+      Permet de retourner l'integraliter du JSON.
     """
     return self.svi
   
   def getStep(self, step=None, dynamique=False,subFolder=None):
     """
-      Permet de retourner une etape specifique du SVI.
+      Permet de retourner une etape specifique du JSON.
       :param step intituler de l'etape a recuperer.
-      :param dynamique indique si le SVI est en mode dynamique dans la 
+      :param dynamique indique si le rendu est en mode dynamique dans la 
       liste des parametres de celui-ci.
       :param subFolder permet de specifier un dossier specifique lors 
       de la generation de l'url.
@@ -66,7 +66,7 @@ class dynamiqueIvr:
       return {step:self.svi['svi'][step]}
     except: 
       return {}
-  
+    
   def getParams(self):
     """
       Retourne les parametres du SVI
@@ -75,3 +75,10 @@ class dynamiqueIvr:
       return self.svi['params']
     except: 
       return {}
+
+  def getParamAndStep(self, step=None, dynamique=False,subFolder=None):
+    """
+      Permet de recuperer une etape ainsi que les parametre
+      specifique du JSON
+    """
+    return {"params":self.getParams(),"svi":self.getStep(step,dynamique,subFolder)}
