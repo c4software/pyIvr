@@ -1,7 +1,7 @@
 from flask import Flask
 from pyIvr.ext.flask.baseFlask import baseFlask
-from pyIvr.decorator import render
-from pyIvr.dynamiqueIvr import dynamiqueIvr
+from pyIvr import render
+from pyIvr import dynamiqueIvr
 
 app = Flask(__name__)
 

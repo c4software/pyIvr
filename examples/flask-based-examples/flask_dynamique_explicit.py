@@ -1,7 +1,7 @@
 from flask import Flask
 
-from pyIvr.decorator import render
-from pyIvr.dynamiqueIvr import dynamiqueIvr
+from pyIvr import render
+from pyIvr import dynamiqueIvr
 svi = dynamiqueIvr("svi.json")
 
 from pyIvr.ext.flask.baseFlask import baseFlask
@@ -24,8 +24,6 @@ def stepByStepSvi(step=None):
     step = svi.getParams()['begin']
   return {"params":{"begin":step},"svi":svi.getStep(step,True,"svi/")}
 
-from pyIvr.decorator import render
-from pyIvr.dynamiqueIvr import dynamiqueIvr
 @app.route("/full/")
 @render('vxml','2.0')
 def fullSvi():

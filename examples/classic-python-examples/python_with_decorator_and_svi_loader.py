@@ -1,5 +1,5 @@
-from pyIvr.dynamiqueIvr import dynamiqueIvr
-from pyIvr.decorator import render
+from pyIvr import dynamiqueIvr
+from pyIvr import render
 
 svi = dynamiqueIvr("svi.json")
 

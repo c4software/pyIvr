@@ -2,7 +2,7 @@ from flask import Flask
 app = Flask(__name__)
 
 from pyIvr.ext.afone.guideVocal import guideVocal
-from pyIvr.decorator import render
+from pyIvr import render
 gv = guideVocal("guide.json")
 
 @app.route("/")

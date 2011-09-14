@@ -1,5 +1,5 @@
 from pyIvr.ext.afone.guideVocal import guideVocal
-from pyIvr.decorator import render
+from pyIvr import render
 
 gv = guideVocal("guide.json")
 

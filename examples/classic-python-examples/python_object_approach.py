@@ -1,5 +1,5 @@
 from pyIvr.ext.afone.guideVocal import guideVocal
-from pyIvr.base import renderBase
+from pyIvr import renderBase
 
 # CREATION DES OBJETS DE BASE
 gv = guideVocal("guide.json")

@@ -1,5 +1,7 @@
 from flask import Flask
 from pyIvr.ext.flask.baseFlask import baseFlask
+from pyIvr import render
+from pyIvr import dynamiqueIvr
 
 app = Flask(__name__)
 
@@ -11,8 +13,7 @@ app.add_url_rule("/svi/", view_func=baseFlask.as_view("svi",langage="vxml",versi
 app.add_url_rule("/web/<step>", view_func=baseFlask.as_view("web",langage="xhtml",version="1.0",path="web/"))
 app.add_url_rule("/web/", view_func=baseFlask.as_view("web",langage="xhtml",version="1.0",path="web/"))
 
-from pyIvr.decorator import render
-from pyIvr.dynamiqueIvr import dynamiqueIvr
+
 @app.route("/full/")
 @render('vxml','2.0')
 def fullSvi():
