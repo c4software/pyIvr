@@ -14,6 +14,6 @@ def home(step=None):
   if step is None:
     return blog.get()
   else:
-    return {"params":blog.getParams(),"svi":blog.getStep(step,True,"/")}
+    return blog.getParamAndStep(step)
 	
 app.run(host='0.0.0.0', debug=True)
