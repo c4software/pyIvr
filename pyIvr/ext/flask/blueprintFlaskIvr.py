@@ -2,12 +2,11 @@ from flask import Blueprint
 from pyIvr import dynamiqueIvr
 from pyIvr import render
 
-ivr = Blueprint('ivr', __name__)
-sviJSON = "svi.json"
-jsonLoader = dynamiqueIvr(sviJSON)
+ivrBlueprint = Blueprint('ivr', __name__)
+jsonLoader = dynamiqueIvr("svi.json")
 
-@ivr.route("/ivr")
-@ivr.route("/ivr/<step>")
+@ivrBlueprint.route("/ivr/")
+@ivrBlueprint.route("/ivr/<step>")
 @render('vxml','2.0')
 def ivr(step=None):
   if step is None:
