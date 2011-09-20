@@ -1,9 +1,9 @@
-# Requis : 
+~ Needed packages : 
 - Flask 
 - sqlalchemy
 
-# Initialisation :
+~ Init the database :
 python setup-db.py
 
-# Lancement :
+~ Run :
 python run.py 
