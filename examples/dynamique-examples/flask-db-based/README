@@ -1,0 +1,9 @@
+# Requis : 
+- Flask 
+- sqlalchemy
+
+# Initialisation :
+python setup-db.py
+
+# Lancement :
+python run.py 
