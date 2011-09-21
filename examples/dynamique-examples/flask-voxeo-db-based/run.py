@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, session
 
 # Import de la session pour les requete SQL.
 from database import db_session
@@ -12,6 +12,11 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     return "Hello World!"
+
+# Fonction appele a chaque appel HTTP
+@app.before_request
+def before_request():
+    print "Appel HTTP"
 
 # Permet de fermer la connexion mySQL.
 @app.teardown_request
