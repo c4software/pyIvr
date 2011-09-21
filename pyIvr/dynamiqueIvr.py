@@ -12,13 +12,17 @@ class dynamiqueIvr:
   #: Nombre d'element dans le SVI.
   nbStep = 0
   
-  def __init__(self,empSVI="svi.json"):
+  def __init__(self,empSVI="svi.json",stringJson=None):
     #: Emplacement du SVI
     self.empSVI = empSVI
 
-    #: Si le chargement echoue on raise une exception.
-    if not self.loadSVI():
+    if stringJson is not None:
+      svi = stringJson
+    else:
+      #: Si le chargement echoue on raise une exception.
+      if not self.loadSVI():
         raise Exception("Erreur lors du chargement du SVI")
+    
     return None
   
   def loadSVI(self):
