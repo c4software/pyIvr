@@ -16,6 +16,7 @@ def hello():
 # Fonction appele a chaque appel HTTP
 @app.before_request
 def before_request():
+    # TODO Ajout en session du numero appele au premier appel.
     print "Appel HTTP"
 
 # Permet de fermer la connexion mySQL.
