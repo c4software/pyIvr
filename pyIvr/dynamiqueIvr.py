@@ -17,13 +17,26 @@ class dynamiqueIvr:
     self.empSVI = empSVI
 
     if stringJson is not None:
-      svi = stringJson
+      #: Chargement du json depuis une string.
+      if not self.loadSVIString(stringJson):
+        raise Exception("Erreur lors du chargement du SVI")
     else:
       #: Si le chargement echoue on raise une exception.
       if not self.loadSVI():
         raise Exception("Erreur lors du chargement du SVI")
     
     return None
+  
+  def loadSVIString(self,stringJson):
+    """
+      Charge le SVI depuis une string.
+    """
+    try:
+      self.svi = json.loads(stringJson)
+      self.nbElem = len(self.svi)-1
+      return True
+    except:
+      return False
   
   def loadSVI(self):
     """
