@@ -1,13 +1,12 @@
 {% extends "layout.html" %}
 {% block body %}
-<form action="" method="post">
+<form action="{{actionUrl}}" method="post">
 	<h3>Num&eacute;ro :</h3>
-	<br />
 	<input type="text" class="text" value="{{number}}" name="number" />
+	<input type="hidden" class="text" value="{{id}}" name="id" />
 	
 	<h3>SVI :</h3>
-	<br />
-	<input type="text" class="text" value="{{value}}" name="value" />
+	<textarea name="value" rows='30' cols='100'>{{value}}</textarea>
 	
 	<br />
 	<input type="submit" class="submit" value="{{action}}" name="submit" />

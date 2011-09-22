@@ -1,8 +1,11 @@
 {% extends "layout.html" %}
 {% block body %}
+<h3>Action : </h3>
+<a href='{{url_for('DynamiqueIvrIhm.newApplication')}}'>Ajouter une nouvelle application</a>
+<h3>Liste des applications : </h3>
 <ul>
 	{% for demo in demos %}
-		<li><a href='{{demo.id}}'>{{demo.number}}</a></li>
+		<li><a href='{{url_for('DynamiqueIvrIhm.loadApplication',demo_id=demo.id)}}'>{{demo.number}}</a></li>
 	{% endfor %}
 </ul>
 {% endblock %}
