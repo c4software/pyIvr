@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+<form action="" method="post">
+	<h3>Num&eacute;ro :</h3>
+	<br />
+	<input type="text" class="text" value="{{number}}" name="number" />
+	
+	<h3>SVI :</h3>
+	<br />
+	<input type="text" class="text" value="{{value}}" name="value" />
+	
+	<br />
+	<input type="submit" class="submit" value="{{action}}" name="submit" />
+</form>
+{% endblock %}
