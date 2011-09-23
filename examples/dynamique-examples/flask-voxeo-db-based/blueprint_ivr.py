@@ -21,4 +21,4 @@ def makeResponse(step=None):
   if step is None:
     step = jsonLoader.getParams()['begin']
   
-  return jsonLoader.getParamAndStep(step)
+  return jsonLoader.getParamAndStep(step,True,'irv/')

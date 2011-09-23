@@ -49,4 +49,5 @@ def before_request():
 def shutdown_session(exception):
     db_session.remove()
 
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)

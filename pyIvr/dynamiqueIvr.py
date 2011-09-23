@@ -98,4 +98,8 @@ class dynamiqueIvr:
       Permet de recuperer une etape ainsi que les parametre
       specifique du JSON
     """
+    params = self.getParams()
+    if dynamique:
+      params['begin'] = step
+
     return {"params":self.getParams(),"svi":self.getStep(step,dynamique,subFolder)}
