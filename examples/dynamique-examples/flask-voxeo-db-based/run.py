@@ -23,7 +23,7 @@ def hello():
   if 'calledid' in session:
     return redirect('/ivr/')
   else:
-    return "Aucun SVI en Session. Pour pouvoir continuer vous devez en charer un. Exemple : <a href='/?session.calledid=9996141833'>?session.calledid=9996141833</a>"
+    return "Aucun SVI en Session. Exemple : <a href='/?session.calledid=9996141833'>?session.calledid=9996141833</a>"
 
 @app.route('/favicon.ico')
 def empty():

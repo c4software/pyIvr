@@ -5,7 +5,7 @@
 <h3>Liste des applications : </h3>
 <ul>
 	{% for demo in demos %}
-		<li><a href='{{url_for('DynamiqueIvrIhm.loadApplication',demo_id=demo.id)}}'>{{demo.number}}</a></li>
+		<li><a href='{{url_for('DynamiqueIvrIhm.loadApplication',demo_id=demo.id)}}'>{{demo.number}}</a> | <a href='/?session.calledid={{demo.number}}'>Charger en session</a> </li>
 	{% endfor %}
 </ul>
 {% endblock %}
