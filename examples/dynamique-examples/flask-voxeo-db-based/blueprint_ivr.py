@@ -20,5 +20,32 @@ def makeResponse(step=None):
   jsonLoader = dynamiqueIvr(stringJson=session['ivr'])
   if step is None:
     step = jsonLoader.getParams()['begin']
-  
   return jsonLoader.getParamAndStep(step,True,'irv/')
+
+
+# Generation du SVI d'erreur
+def get_error_svi():
+  session['ivr'] = """{
+  "params": {
+    "begin": "errorMessage"
+  },
+  "svi":{
+    "errorMessage": {
+      "type": "message",
+      "parametre": {
+        "ressource": {
+          "son": "/static/error.wav",
+          "text": "Introuvable"
+        },
+        "idBlock": "errorMessage",
+        "nextId": "end"
+      }
+    },
+    "end": {
+      "type": "disconnect",
+      "parametre": {
+        "idBlock": "end"
+      }
+    }
+  }
+}"""

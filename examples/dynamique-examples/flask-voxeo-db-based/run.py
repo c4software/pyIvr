@@ -7,7 +7,7 @@ from database import db_session
 from models import Demo
 
 # Import des blueprint
-from blueprint_ivr import ivrDemo
+from blueprint_ivr import ivrDemo, get_error_svi
 from blueprint_ivrIhm import ivrIhmDemo
 
 # Declaration de l'application
@@ -19,11 +19,11 @@ app.register_blueprint(ivrDemo)
 app.register_blueprint(ivrIhmDemo, url_prefix='/ihm')
 
 @app.route("/")
-def hello():
-  if 'calledid' in session:
-    return redirect('/ivr/')
-  else:
-    return "Aucun SVI en Session. Exemple : <a href='/?session.calledid=9996141833'>?session.calledid=9996141833</a>"
+def main():
+  if 'calledid' not in session:
+    get_error_svi()
+    
+  return redirect('/ivr/')
 
 @app.route('/favicon.ico')
 def empty():
@@ -42,7 +42,11 @@ def before_request():
     calledid = request.args.get('session.calledid','')
     if calledid is not "":
       session['calledid'] = calledid
-      session['ivr'] = Demo.query.filter(Demo.number == calledid).first().value
+      try:
+        session['ivr'] = Demo.query.filter(Demo.number == calledid).first().value
+      except:
+        get_error_svi()
+        
 
 # Permet de fermer la connexion mySQL.
 @app.teardown_request
