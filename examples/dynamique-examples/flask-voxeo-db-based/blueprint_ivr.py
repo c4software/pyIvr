@@ -20,7 +20,7 @@ def makeResponse(step=None):
   jsonLoader = dynamiqueIvr(stringJson=session['ivr'])
   if step is None:
     step = jsonLoader.getParams()['begin']
-  return jsonLoader.getParamAndStep(step,True,'irv/')
+  return jsonLoader.getParamAndStep(step,True,'ivr/')
 
 
 # Generation du SVI d'erreur
