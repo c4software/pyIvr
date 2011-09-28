@@ -30,4 +30,3 @@ def get_error_svi():
   b.message({"ressource":{"son":"/static/error.wav","text":"Introuvable"},"idBlock":"errorMessage","nextId":"#end"})
   b.disconnect({"idBlock":"#end"})
   return b.final_render({"begin":"errorMessage"})
- # session['ivr'
