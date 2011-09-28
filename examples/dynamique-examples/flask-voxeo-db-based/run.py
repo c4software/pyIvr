@@ -21,7 +21,7 @@ app.register_blueprint(ivrIhmDemo, url_prefix='/ihm')
 @app.route("/")
 def main():
   if 'calledid' not in session:
-    return get_error_svi(), 200, {'Content-Type': 'text/xml'}
+    get_error_svi()
 
   return redirect('/ivr/')
 
