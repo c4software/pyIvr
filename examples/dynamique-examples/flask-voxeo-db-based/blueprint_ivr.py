@@ -25,27 +25,9 @@ def makeResponse(step=None):
 
 # Generation du SVI d'erreur
 def get_error_svi():
-  session['ivr'] = """{
-  "params": {
-    "begin": "errorMessage"
-  },
-  "svi":{
-    "errorMessage": {
-      "type": "message",
-      "parametre": {
-        "ressource": {
-          "son": "/static/error.wav",
-          "text": "Introuvable"
-        },
-        "idBlock": "errorMessage",
-        "nextId": "end"
-      }
-    },
-    "end": {
-      "type": "disconnect",
-      "parametre": {
-        "idBlock": "end"
-      }
-    }
-  }
-}"""
+  from pyIvr import renderBase
+  b = renderBase(render='vxml',version='2.0')
+  b.message({"ressource":{"son":"/static/error.wav","text":"Introuvable"},"idBlock":"errorMessage","nextId":"#end"})
+  b.disconnect({"idBlock":"#end"})
+  return b.final_render({"begin":"errorMessage"})
+ # session['ivr'

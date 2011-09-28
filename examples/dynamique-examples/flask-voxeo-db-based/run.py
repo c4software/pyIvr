@@ -21,8 +21,8 @@ app.register_blueprint(ivrIhmDemo, url_prefix='/ihm')
 @app.route("/")
 def main():
   if 'calledid' not in session:
-    get_error_svi()
-    
+    return get_error_svi(), 200, {'Content-Type': 'text/xml'}
+
   return redirect('/ivr/')
 
 @app.route('/favicon.ico')
@@ -40,12 +40,16 @@ def before_request():
       lors du premier appel.
     """
     calledid = request.args.get('session.calledid','')
+    
     if calledid is not "":
       session['calledid'] = calledid
       try:
         session['ivr'] = Demo.query.filter(Demo.number == calledid).first().value
       except:
-        get_error_svi()
+        if 'calledid' in session:
+          del session['calledid']
+        if 'ivr' in session:
+          del session['ivr']
         
 
 # Permet de fermer la connexion mySQL.
