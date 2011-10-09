@@ -4,7 +4,7 @@
 		<audio src="{{ressource['son']}}" /> 
   </prompt>
 		
-	<choice dtmf="*" next="{{baseUrl}}{{nextId}}" fetchtimeout="1s" /> 
+	<choice dtmf="*" next="{{dynamique}}{{nextId}}" fetchtimeout="1s" /> 
 
 	<noinput> 
 		<goto next="{{dynamique}}{{nextId}}" /> 
